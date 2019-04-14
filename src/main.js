@@ -3,11 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-//解决移动端300毫秒点击事件的延迟
+// 解决移动端300毫秒点击事件的延迟
 import fastClick from 'fastClick'
 import './assets/styles/reset.css'
-//解决1像素框
+// 解决1像素框
 import './assets/styles/border.css'
+import './assets/styles/iconfont.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
@@ -20,4 +21,4 @@ new Vue({
   template: '<App/>'
 })
 
-//路由就是根据网址的不同，返回不同的内容给用户
+// 路由就是根据网址的不同，返回不同的内容给用户
