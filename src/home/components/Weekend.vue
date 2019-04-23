@@ -1,16 +1,17 @@
 <template>
     <div>
-        <div class="title">热销推荐</div>
+        <div class="title">周末去哪</div>
         <ul>
             <li class="item border-bottom" 
             v-for="item of recommendList"
             :key="item.id"
             >
+            <div class="item-img-wrapper">
                    <img class="item-img" :src='item.imgUrl'/>
+            </div>    
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
                     <p class="item=desc">{{item.desc}}</p>
-                    <button class="item-button">查看详情</button>
                 </div>
             </li>
         </ul>
@@ -19,22 +20,22 @@
 
 <script>
 export default {
-    name: 'HomeRecommend',
+    name: 'HomeWeekend',
     data () {
         return{
                  recommendList: [{
             id: '0001',
-            imgUrl: 'http://img1.qunarzz.com/sight/p0/1604/1e/1e75f8e1af9fe81f90.img.jpg_200x200_0ded2b1b.jpg',
+            imgUrl: 'http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg',
             title: '世界花卉大观园',
             desc: '世界花卉大观园'
         },{
             id: '0002',
-            imgUrl: 'http://img1.qunarzz.com/sight/p0/1604/1e/1e75f8e1af9fe81f90.img.jpg_200x200_0ded2b1b.jpg',
+            imgUrl: 'http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg',
             title: '世界花卉大观园',
             desc: '世界花卉大观园'
         },{
             id: '0003',
-            imgUrl: 'http://img1.qunarzz.com/sight/p0/1604/1e/1e75f8e1af9fe81f90.img.jpg_200x200_0ded2b1b.jpg',
+            imgUrl: 'http://img1.qunarzz.com/sight/source/1811/15/66f14e0fd6fbb.jpg_r_640x214_5d69f21d.jpg',
             title: '世界花卉大观园',
             desc: '世界花卉大观园'
         }]
@@ -48,30 +49,19 @@ export default {
         line-height: .8rem
         background: #eee
         text-indent: .2rem
-    .item
+    .item-img-wrapper
         overflow hidden
-        display: flex
-        height: 1.9rem
-        // background: red
+        height 0
+        padding-bottom 33.9%
         .item-img
-            width: 2rem
-            height: 2rem
-            padding: .1rem
-        .item-info
-            flex: 1
-            padding: .1rem
-            .item-title
-                line-height .54rem
-                font-size .32rem
-                color #212121
-            .item-desc
-                line-height .45rem
-                color #ccc
-            .item-button
-                line-height .44rem
-                margin-top .2rem
-                background #ff9300
-                padding: 0 .2rem
-                border-radius .06rem
-                background #fff
+            width 100%
+    .item-info
+        padding: .1rem
+        .item-title
+            line-height .54rem
+            font-size .32rem
+            color #212121
+        .item-desc
+            line-height .45rem
+            color #ccc
 </style>
