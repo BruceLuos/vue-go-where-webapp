@@ -1,6 +1,6 @@
 <template>
     <div class="icons">
-        <swiper >
+        <swiper  :options="swiperOption">
             <swiper-slide v-for="(page, index) of pages" :key="index">
                 <div class="icon" v-for="item of page"
                 :key="item.id"
@@ -20,6 +20,14 @@ export default {
     name: 'HomeIcons',
     props:{
         list: Array
+    },
+    data () {
+        return{
+            swiperOption: {
+                autoplay: false
+            }
+        }
+        
     },
         computed : {
             // 当图标超过8个的时候，会把多出来的添加到第二页。pages=1/8=0  或  pages=9/8=1
