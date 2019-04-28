@@ -1,16 +1,19 @@
 <template>
 <div class="header">
-<div class="header-left">
-    <div class="iconfont back-icon">&#xe606;</div>
-</div>
-<div class="header-input">
+    <div class="header-left">
+        <div class="iconfont back-icon">&#xe606;</div>
+    </div>
+    <div class="header-input">
     <span class="iconfont">&#xe607;</span>
     输入城市/景点/游玩景点
     </div>
-<div class="header-right">
+    <router-link to="/city">
+    <!-- 页面跳转 -->
+    <div class="header-right">
     {{this.city}}
     <span class="iconfont city-icon">&#xe608;</span>
     </div>
+    </router-link>
 </div>
 </template>
 
@@ -30,6 +33,7 @@ export default{
 .header
     display: flex
     line-height: .86rem
+    height: .86rem
     background: $bgColor
     color: #fff
     .header-left
@@ -52,6 +56,7 @@ export default{
         float: right
         text-align: center
         font-size: .3rem
+        color: #fff
         .city-icon
             font-size: .4rem
 </style>
