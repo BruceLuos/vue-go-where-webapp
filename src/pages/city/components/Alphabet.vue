@@ -3,7 +3,7 @@
         <li class="item" v-for="(item, key) of cities" :key="key">{{key}}</li>
     </ul>
 </template>
-<<script>
+<script>
 export default {
     name: 'CityAlphabet',
     props: {

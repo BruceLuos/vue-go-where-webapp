@@ -36,7 +36,7 @@
      </div>
     </div>
 </template>
-<<script>
+<script>
 import Bscroll from 'better-scroll'
 export default {
     name: 'CityList',
@@ -51,7 +51,7 @@ export default {
 </script>
 
 
-<<style lang="stylus" scoped>
+<style lang="stylus" scoped>
 @import '~@/assets/styles/varibles.styl'
 
 
