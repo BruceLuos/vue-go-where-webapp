@@ -19,10 +19,13 @@
 
 
 <script>
+import { mapState } from 'vuex'
 export default{
     name:'HomeHeader',
-    props: {
-        city: String
+    computed: {
+        // 把vuex里的数据映射到这个组件的的计算属性里
+        // 这里是把city这个公共数据映射到city这个计算属性里
+        ...mapState(['city'])
     }
 }
 
@@ -52,12 +55,13 @@ export default{
          border-radius: .1rem
          color: #ccc
     .header-right
-        width: 1.24rem
+        min-width: 1.04rem
+        padding 0 .1rem
         float: right
         text-align: center
-        font-size: .3rem
+        font-size: .2.5rem
         color: #fff
         .city-icon
-            font-size: .4rem
+            font-size: .3.5rem
 </style>
 
