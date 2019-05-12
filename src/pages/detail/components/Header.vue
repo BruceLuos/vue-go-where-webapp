@@ -52,6 +52,7 @@ export default {
     activated() {
         window.addEventListener('scroll', this.handleScroll)
     },
+    // 全局变量的解绑
     deactivated() {
         window.addEventListener('scroll', this.handleScroll)
     },
@@ -74,6 +75,8 @@ export default {
         color #fff
         font-size .5rem
 .header-fixed
+// Fixed固定定位，只针对浏览器窗口定位，上下左右，不会随着窗口大小改变，固定不变，例如固定位置的小广告。
+    z-index 2
     position: fixed
     top 0
     left  0

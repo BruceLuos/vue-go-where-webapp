@@ -22,5 +22,9 @@ export default new Router({
       name: 'Detail',
       component: Detail
     }
-  ]
+  ],
+  // 由于多个页面的拖动会互相影响所以要用到这个让每个页面的初始位置都为最顶部
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })
